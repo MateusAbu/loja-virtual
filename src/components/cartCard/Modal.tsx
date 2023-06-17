@@ -30,7 +30,7 @@ export default function Modal({ totalPrice }: ModalProps) {
             <Dialog open={open} handler={handleOpen}>
                 <DialogHeader>Checkout</DialogHeader>
                 <DialogBody divider>
-                    Confirm your purchase, in total value of $ {totalPrice}?
+                    Confirm your purchase, in total value of ${totalPrice}?
                 </DialogBody>
                 <DialogFooter>
                     <Button

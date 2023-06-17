@@ -52,7 +52,7 @@ export default function ProductCard({ product }: CardProductProps) {
                 <div className="mb-3 flex flex-col justify-between h-full">
                     <div>
                         <Link href={{ pathname: '/product', query: { id: product.id } }}>
-                            <Typography variant="h3" color="blue-gray" className="font-bold"
+                            <Typography id={product.id} variant="h3" color="blue-gray" className="font-bold"
                                 onMouseOver={(e: any) => e.target.style.textDecoration = 'underline'}
                                 onMouseOut={(e: any) => e.target.style.textDecoration = 'none'}>
                                 {truncateTitle(product.title)}

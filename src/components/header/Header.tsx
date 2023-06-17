@@ -21,24 +21,6 @@ export default function Header() {
                     Kamel Store
                 </Typography>
 
-                <div className="relative flex w-full gap-2 md:w-max">
-                    <Input
-                        type="search"
-                        label="Search"
-                        className="pr-20"
-                        containerProps={{
-                            className: "min-w-[288px]",
-                        }}
-                    />
-                    <Button
-                        size="sm"
-                        color="white"
-                        className="!absolute right-1 top-1 rounded"
-                    >
-                        Search
-                    </Button>
-                </div>
-
                 <Link href="/cart">
                     <IconButton variant="outlined" color="blue" className="ml-5">
                         <ShoppingCartIcon className="h-4 w-4" />

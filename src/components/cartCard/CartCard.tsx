@@ -54,7 +54,7 @@ const CartCard: React.FC = () => {
                             const product = cartDetails.find((product) => product.id === cartItem.productId)
 
                             return (
-                                <Card key={cartItem.productId} className="flex flex-col md:flex-row items-center gap-4 my-4">
+                                <Card key={cartItem.productId} data-testid="cart-item" className="flex flex-col md:flex-row items-center gap-4 my-4">
                                     <div>
                                         <Image
                                             className="rounded-lg"
@@ -80,6 +80,7 @@ const CartCard: React.FC = () => {
                                                 </Typography>
                                                 <Input
                                                     label="Quantity"
+                                                    data-testid="quantity-input"
                                                     type="number"
                                                     value={cartItem.quantity}
                                                     onChange={(e) =>
@@ -94,6 +95,7 @@ const CartCard: React.FC = () => {
                                         <IconButton
                                             color="red"
                                             className="mt-4 self-end"
+                                            data-testid="trash-icon"
                                             onClick={() => handleDelete(item.userId, cartItem.productId)}
                                         >
                                             <TrashIcon className="h-5 w-5" />
