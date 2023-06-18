@@ -106,6 +106,7 @@ const CartCard: React.FC = () => {
                         })
                     )
                 ))}
+            </div>
                 <div className="flex justify-center items-start md:w-1/4">
                     <Card className="pl-3 ml-2 mt-4">
                         <CardBody>
@@ -116,7 +117,6 @@ const CartCard: React.FC = () => {
                         </CardBody>
                     </Card>
                 </div>
-            </div>
         </div>
     )
 }

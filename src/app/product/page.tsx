@@ -17,9 +17,14 @@ import {
 } from "@heroicons/react/24/outline"
 import { useContext, useState } from 'react'
 import { CartContext } from '@/hooks/useCart'
+import ConfirmationModal from '../../components/confirmationModal/Modal'
 
 export default function Product() {
     const params = useSearchParams()
+
+    const [open, setOpen] = useState(false)
+ 
+  const handleOpen = () => setOpen(!open)
 
     const currentDate = new Date()
     const year = currentDate.getFullYear()
@@ -44,6 +49,7 @@ export default function Product() {
             ]
         }
         addToCart(item)
+        handleOpen()
     }
 
     return (
@@ -95,6 +101,7 @@ export default function Product() {
                             </div>
                         </CardFooter>
                     </Card>
+                    <ConfirmationModal open={open} handleOpen={handleOpen}/>
                 </>
             )}
         </div>
